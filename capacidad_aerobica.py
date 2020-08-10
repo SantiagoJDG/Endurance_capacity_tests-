@@ -1,3 +1,4 @@
+import numpy as np
 import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -53,201 +54,217 @@ def clasification(cap_aer, sexo, edad):
 
 def clas_men(cap_aer, edad):
     logger.info('Clasificatin for men for age')
-    cap_aer = round(cap_aer)
+    cap_aer = float("{:.2f}".format(cap_aer))
 
     if edad <= 19:
         
         age_19 = { 
-            'Muy pobre' : list(range(0, 35)),
-            'Pobre' : list(range(35, 38)),
-            'Promedio' : list(range(38, 45)), 
-            'Bueno' : list(range(45, 50)),
-            'Excelente' : list(range(51, 55)),
-            'Superior' : list(range(56, 100))
+            'Muy pobre' : list(np.arange(0.00, 35.10, 0.01)),
+            'Pobre' : list(np.arange(35.10, 38.40, 0.01)),
+            'Promedio' : list(np.arange(38.40, 45.20, 0.01)), 
+            'Bueno' : list(np.arange(45.20, 51.00, 0.01)),
+            'Excelente' : list(np.arange(51.00, 56.00, 0.01)),
+            'Superior' : list(np.arange(56.00, 60.00, 0.01))
         } 
 
         for categ, valor in age_19.items(): 
             for val in valor:
-                if cap_aer == val:
-                    print('La capacidad aerobica es: {}, especificamente de: {}'.format(categ, val))
+                vals = float("{:.2f}".format(val))
+                if vals == cap_aer:
+                    print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
 
     elif edad is list(range(20, 29)): 
 
         age_20_29 = {
-            'Muy pobre' : list(range(0, 33)),
-            'Pobre' : list(range(34, 36)),
-            'Promedio' : list(range(37, 42)), 
-            'Bueno' : list(range(43, 46)),
-            'Excelente' : list(range(47, 52)),
-            'Superior' : list(range(53, 100))
+            'Muy pobre' : list(np.arange(0.00, 33.10, 0.01)),
+            'Pobre' : list(np.arange(33.10, 36.50, 0.01)),
+            'Promedio' : list(np.arange(36.50, 42.30, 0.01)), 
+            'Bueno' : list(np.arange(42.30, 46.50, 0.01)),
+            'Excelente' : list(np.arange(46.50, 52.50, 0.01)),
+            'Superior' : list(np.arange(52.50, 60.00, 0.01))
         } 
 
         for categ, valor in age_20_29.items(): 
             for val in valor:
-                if cap_aer == val:
-                    print('La capacidad aerobica es: {}, especificamente de: {}'.format(categ, val))
+                vals = float("{:.2f}".format(val))
+                if vals == cap_aer:
+                    print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
         
     elif edad is list(range(30, 39)):
 
         age_30_39 = {
-            'Muy pobre' : list(range(0, 31)),
-            'Pobre' : list(range(32, 35)),
-            'Promedio' : list(range(36, 40)), 
-            'Bueno' : list(range(41, 45)),
-            'Excelente' : list(range(46, 50)),
-            'Superior' : list(range(51, 100))
+            'Muy pobre' : list(np.arange(0.00, 31.60, 0.01)),
+            'Pobre' : list(np.arange(31.60, 35.50, 0.01)),
+            'Promedio' : list(np.arange(35.50, 41.00, 0.01)), 
+            'Bueno' : list(np.arange(41.00, 45.00, 0.01)),
+            'Excelente' : list(np.arange(45.00, 49.50, 0.01)),
+            'Superior' : list(np.arange(49.50, 60.00, 0.01))
         } 
 
         for categ, valor in age_30_39.items(): 
             for val in valor:
-                if cap_aer == val:
-                    print('La capacidad aerobica es: {}, especificamente de: {}'.format(categ, val))
+                vals = float("{:.2f}".format(val))
+                if vals == cap_aer:
+                    print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
         
     elif edad is list(range(40, 49)):
         
         age_40_49 = {
-            'Muy pobre' : list(range(0, 30)),
-            'Pobre' : list(range(31, 34)),
-            'Promedio' : list(range(34, 39)), 
-            'Bueno' : list(range(40, 43)),
-            'Excelente' : list(range(44, 47)),
-            'Superior' : list(range(48, 100))
+            'Muy pobre' : list(np.arange(0.00, 30.30, 0.01)),
+            'Pobre' : list(np.arange(30.30, 33.60, 0.01)),
+            'Promedio' : list(np.arange(33.60, 39.00)), 
+            'Bueno' : list(np.arange(39.00, 43.80, 0.01)),
+            'Excelente' : list(np.arange(43.80, 48.10, 0.01)),
+            'Superior' : list(np.arange(48.10, 60.00, 0.01))
         } 
 
         for categ, valor in age_40_49.items(): 
             for val in valor:
-                if cap_aer == val:
-                    print('La capacidad aerobica es: {}, especificamente de: {}'.format(categ, val))
+                vals = float("{:.2f}".format(val))
+                if vals == cap_aer:
+                    print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
         
     elif edad is list(range(50, 59)):
 
         age_50_59 = {
-            'Muy pobre' : list(range(0, 25)),
-            'Pobre' : list(range(26, 31)),
-            'Promedio' : list(range(32, 36)), 
-            'Bueno' : list(range(36, 41)),
-            'Excelente' : list(range(42, 45)),
-            'Superior' : list(range(46, 100))
+            'Muy pobre' : list(np.arange(0.00, 26.20, 0.01)),
+            'Pobre' : list(np.arange(26.20, 31.00, 0.01)),
+            'Promedio' : list(np.arange(31.00, 35.80, 0.01)), 
+            'Bueno' : list(np.arange(35.80, 41.00, 0.01)),
+            'Excelente' : list(np.arange(41.00, 45.40, 0.01)),
+            'Superior' : list(np.arange(45.40, 60.00, 0.01))
         } 
 
         for categ, valor in age_50_59.items(): 
             for val in valor:
-                if cap_aer == val:
-                    print('La capacidad aerobica es: {}, especificamente de: {}'.format(categ, val))
+                vals = float("{:.2f}".format(val))
+                if vals == cap_aer:
+                    print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
 
     else: 
         age_60 = {
-            'Muy pobre' : list(range(0, 20)),
-            'Pobre' : list(range(21, 25)),
-            'Promedio' : list(range(26, 31)), 
-            'Bueno' : list(range(32, 36)),
-            'Excelente' : list(range(37, 44)),
-            'Superior' : list(range(45, 100))
+            'Muy pobre' : list(np.arange(0.00, 20.60, 0.01)),
+            'Pobre' : list(np.arange(20.60, 26.10, 0.01)),
+            'Promedio' : list(np.arange(26.10, 32.30, 0.01)), 
+            'Bueno' : list(np.arange(32.30, 36.50, 0.01)),
+            'Excelente' : list(np.arange(36.50, 44.30, 0.01)),
+            'Superior' : list(np.arange(44.30, 60.00, 0.01))
         } 
 
         for categ, valor in age_60.items(): 
             for val in valor:
-                if cap_aer == val:
-                    print('La capacidad aerobica es: {}, especificamente de: {}'.format(categ, val))
+                vals = float("{:.2f}".format(val))
+                if vals == cap_aer:
+                    print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
                
 def clas_woman(cap_aer, edad):
     logger.info('Clasificatin for woman for age')
-    cap_aer = round(cap_aer)
+    cap_aer = float("{:.2f}".format(cap_aer))
 
     if edad <= 19:
+        logger.info('Clasificatin for woman less than 19 years')
         
         age_19 = { 
-            'Muy pobre' : list(range(0, 24)),
-            'Pobre' : list(range(25, 31)),
-            'Promedio' : list(range(32, 35)), 
-            'Bueno' : list(range(35, 39)),
-            'Excelente' : list(range(40, 56)),
-            'Superior' : list(range(57, 100))
+            'Muy pobre' : list(np.arange(0.00, 25.10, 0.01)),
+            'Pobre' : list(np.arange(25.10, 31.00, 0.01)),
+            'Promedio' : list(np.arange(31.00, 35.00, 0.01)), 
+            'Bueno' : list(np.arange(35.00, 39.00, 0.01)),
+            'Excelente' : list(np.arange(39.00, 42.00, 0.01)),
+            'Superior' : list(np.arange(42.00, 60.00, 0.01))
         } 
 
         for categ, valor in age_19.items(): 
             for val in valor:
-                if cap_aer == val:
-                    print('La capacidad aerobica es: {}, especificamente de: {}'.format(categ, val))
+                vals = float("{:.2f}".format(val))
+                if vals == cap_aer:
+                    print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
 
     elif edad is list(range(20, 29)): 
 
         age_20_29 = {
-            'Muy pobre' : list(range(0, 23)),
-            'Pobre' : list(range(24, 29)),
-            'Promedio' : list(range(30, 33)), 
-            'Bueno' : list(range(34, 37)),
-            'Excelente' : list(range(38, 42)),
-            'Superior' : list(range(43, 100))
+            'Muy pobre' : list(np.arange(0.00, 23.70, 0.01)),
+            'Pobre' : list(np.arange(23.70, 29.00, 0.01)),
+            'Promedio' : list(np.arange(29.00, 33.00, 0.01)), 
+            'Bueno' : list(np.arange(33.00, 37.00, 0.01)),
+            'Excelente' : list(np.arange(37.00, 41.00, 0.01)),
+            'Superior' : list(np.arange(41.00, 60.00, 0.01))
         } 
 
         for categ, valor in age_20_29.items(): 
             for val in valor:
-                if cap_aer == val:
-                    print('La capacidad aerobica es: {}, especificamente de: {}'.format(categ, val))
+                vals = float("{:.2f}".format(val))
+                if vals == cap_aer:
+                    print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
         
     elif edad is list(range(30, 39)):
 
         age_30_39 = {
-            'Muy pobre' : list(range(0, 22)),
-            'Pobre' : list(range(23, 26)),
-            'Promedio' : list(range(27, 31)), 
-            'Bueno' : list(range(32, 34)),
-            'Excelente' : list(range(35, 40)),
-            'Superior' : list(range(41, 100))
+            'Muy pobre' : list(np.arange(0.00, 22.90, 0.01)),
+            'Pobre' : list(np.arange(22.90, 27.00, 0.01)),
+            'Promedio' : list(np.arange(27.00, 31.50, 0.01)), 
+            'Bueno' : list(np.arange(31.50, 35.70, 0.01)),
+            'Excelente' : list(np.arange(35.70, 40.20, 0.01)),
+            'Superior' : list(range(40.20, 60.00, 0.01))
         } 
 
         for categ, valor in age_30_39.items(): 
             for val in valor:
-                if cap_aer == val:
-                    print('La capacidad aerobica es: {}, especificamente de: {}'.format(categ, val))
+                vals = float("{:.2f}".format(val))
+                if vals == cap_aer:
+                    print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
         
     elif edad is list(range(40, 49)):
         
         age_40_49 = {
-            'Muy pobre' : list(range(0, 20)),
-            'Pobre' : list(range(21, 24)),
-            'Promedio' : list(range(25, 29)), 
-            'Bueno' : list(range(30, 33)),
-            'Excelente' : list(range(34, 37)),
-            'Superior' : list(range(38, 100))
+            'Muy pobre' : list(np.arange(0.00, 21.10, 0.01)),
+            'Pobre' : list(np.arange(21.10, 24.50, 0.01)),
+            'Promedio' : list(np.arange(24.50, 29.00, 0.01)), 
+            'Bueno' : list(np.arange(29.00, 32.90, 0.01)),
+            'Excelente' : list(np.arange(32.90, 37.00, 0.01)),
+            'Superior' : list(np.arange(37.00, 60.00, 0.01))
         } 
 
         for categ, valor in age_40_49.items(): 
             for val in valor:
-                if cap_aer == val:
-                    print('La capacidad aerobica es: {}, especificamente de: {}'.format(categ, val))
+                vals = float("{:.2f}".format(val))
+                if vals == cap_aer:
+                    print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
         
     elif edad is list(range(50, 59)):
+        logger.info('Clasificatin for woman between 50-59')
+
 
         age_50_59 = {
-            'Muy pobre' : list(range(0, 20)),
-            'Pobre' : list(range(21, 22)),
-            'Promedio' : list(range(23, 26)), 
-            'Bueno' : list(range(27, 30)),
-            'Excelente' : list(range(31, 36)),
-            'Superior' : list(range(37, 100))
+            'Muy pobre' : list(np.arange(0.00, 20.30, 0.01)),
+            'Pobre' : list(np.arange(20.30, 22.80, 0.01)),
+            'Promedio' : list(np.arange(22.80, 27.00, 0.01)), 
+            'Bueno' : list(np.arange(27.00, 31.50, 0.01)),
+            'Excelente' : list(np.arange(31.50, 35.80, 0.01)),
+            'Superior' : list(np.arange(35.80, 60.00, 0.01))
         } 
 
         for categ, valor in age_50_59.items(): 
             for val in valor:
-                if cap_aer == val:
-                    print('La capacidad aerobica es: {}, especificamente de: {}'.format(categ, val))
+                vals = float("{:.2f}".format(val))
+                print(categ, vals)
+                if vals == cap_aer:
+                    print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
 
     else: 
         age_60 = {
-            'Muy pobre' : list(range(0, 17)),
-            'Pobre' : list(range(18, 20)),
-            'Promedio' : list(range(21, 24)), 
-            'Bueno' : list(range(25, 30)),
-            'Excelente' : list(range(31, 32)),
-            'Superior' : list(range(33, 100))
+            'Muy pobre' : list(np.arange(0.00, 17.60, 0.01)),
+            'Pobre' : list(np.arange(17.60, 20.20, 0.01)),
+            'Promedio' : list(np.arange(20.20, 24.50, 0.01)), 
+            'Bueno' : list(np.arange(24.50, 30.30, 0.01)),
+            'Excelente' : list(np.arange(30.30, 31.50, 0.01)),
+            'Superior' : list(np.arange(31.50, 60.00, 0.01))
         } 
 
         for categ, valor in age_60.items(): 
             for val in valor:
-                if cap_aer == val:
-                    print('La capacidad aerobica es: {}, especificamente de: {}'.format(categ, val))
+                vals = float("{:.2f}".format(val))
+                if vals == cap_aer:
+                    print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
         
         
           
