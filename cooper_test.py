@@ -147,7 +147,7 @@ def ct_woman_age_clas(miles, edad):
                 if miles == vals:
                     print('Segun Cooper Test tu capacidad es: {}, especificamente de: {}'.format(categ, vals))
     
-    elif edad is list(range(20, 29)):
+    elif edad in list(range(20, 29)):
 
         age_20_29 = {
             'Muy Pobre' : list(np.arange(0.00, 0.97, 0.01)),
@@ -164,7 +164,7 @@ def ct_woman_age_clas(miles, edad):
                 if miles == vals:
                     print('Segun Cooper Test tu capacidad es: {}, especificamente de: {}'.format(categ, vals))
     
-    elif edad is list(range(30, 39)):
+    elif edad in list(range(30, 39)):
 
         age_30_39 = {
             'Muy Pobre' : list(np.arange(0.00, 0.95, 0.01)),
@@ -181,7 +181,7 @@ def ct_woman_age_clas(miles, edad):
                 if miles == vals:
                     print('Segun Cooper Test tu capacidad es: {}, especificamente de: {}'.format(categ, vals))
 
-    elif edad is list(range(40, 49)):
+    elif edad in list(range(40, 49)):
 
         age_40_49 = {
             'Muy Pobre' : list(np.arange(0.00, 0.89, 0.01)),
@@ -198,7 +198,7 @@ def ct_woman_age_clas(miles, edad):
                 if miles == vals:
                     print('Segun Cooper Test tu capacidad es: {}, especificamente de: {}'.format(categ, vals))
 
-    elif edad is list(range(50, 59)):
+    elif edad in list(range(50, 59)):
 
         age_50_59 = {
             'Muy Pobre' : list(np.arange(0.00, 0.85, 0.01)),

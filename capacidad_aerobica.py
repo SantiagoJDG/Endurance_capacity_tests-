@@ -73,7 +73,7 @@ def clas_men(cap_aer, edad):
                 if vals == cap_aer:
                     print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
 
-    elif edad is list(range(20, 29)): 
+    elif edad in list(range(20, 29)): 
 
         age_20_29 = {
             'Muy pobre' : list(np.arange(0.00, 33.10, 0.01)),
@@ -90,7 +90,7 @@ def clas_men(cap_aer, edad):
                 if vals == cap_aer:
                     print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
         
-    elif edad is list(range(30, 39)):
+    elif edad in list(range(30, 39)):
 
         age_30_39 = {
             'Muy pobre' : list(np.arange(0.00, 31.60, 0.01)),
@@ -107,12 +107,12 @@ def clas_men(cap_aer, edad):
                 if vals == cap_aer:
                     print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
         
-    elif edad is list(range(40, 49)):
+    elif edad in list(range(40, 49)):
         
         age_40_49 = {
             'Muy pobre' : list(np.arange(0.00, 30.30, 0.01)),
             'Pobre' : list(np.arange(30.30, 33.60, 0.01)),
-            'Promedio' : list(np.arange(33.60, 39.00)), 
+            'Promedio' : list(np.arange(33.60, 39.00, 0.01)), 
             'Bueno' : list(np.arange(39.00, 43.80, 0.01)),
             'Excelente' : list(np.arange(43.80, 48.10, 0.01)),
             'Superior' : list(np.arange(48.10, 60.00, 0.01))
@@ -124,7 +124,7 @@ def clas_men(cap_aer, edad):
                 if vals == cap_aer:
                     print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
         
-    elif edad is list(range(50, 59)):
+    elif edad in list(range(50, 59)):
 
         age_50_59 = {
             'Muy pobre' : list(np.arange(0.00, 26.20, 0.01)),
@@ -179,7 +179,7 @@ def clas_woman(cap_aer, edad):
                 if vals == cap_aer:
                     print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
 
-    elif edad is list(range(20, 29)): 
+    elif edad in list(range(20, 29)): 
 
         age_20_29 = {
             'Muy pobre' : list(np.arange(0.00, 23.70, 0.01)),
@@ -196,7 +196,7 @@ def clas_woman(cap_aer, edad):
                 if vals == cap_aer:
                     print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
         
-    elif edad is list(range(30, 39)):
+    elif edad in list(range(30, 39)):
 
         age_30_39 = {
             'Muy pobre' : list(np.arange(0.00, 22.90, 0.01)),
@@ -204,7 +204,7 @@ def clas_woman(cap_aer, edad):
             'Promedio' : list(np.arange(27.00, 31.50, 0.01)), 
             'Bueno' : list(np.arange(31.50, 35.70, 0.01)),
             'Excelente' : list(np.arange(35.70, 40.20, 0.01)),
-            'Superior' : list(range(40.20, 60.00, 0.01))
+            'Superior' : list(np.arange(40.20, 60.00, 0.01))
         } 
 
         for categ, valor in age_30_39.items(): 
@@ -213,7 +213,7 @@ def clas_woman(cap_aer, edad):
                 if vals == cap_aer:
                     print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
         
-    elif edad is list(range(40, 49)):
+    elif edad in list(range(40, 49)):
         
         age_40_49 = {
             'Muy pobre' : list(np.arange(0.00, 21.10, 0.01)),
@@ -230,7 +230,7 @@ def clas_woman(cap_aer, edad):
                 if vals == cap_aer:
                     print('Su capacidad aerobica es: {}, especificamente de: {}'.format(categ, vals))
         
-    elif edad is list(range(50, 59)):
+    elif edad in list(range(50, 59)):
         logger.info('Clasificatin for woman between 50-59')
 
 
